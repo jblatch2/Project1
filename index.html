@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
     <link  href="https://fonts.googleapis.com/css?family=QuickSand:500" rel ="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script type="text/javascript">
@@ -15,9 +19,9 @@
           }
         })
         </script>
-    </head>
-    <body>
-        <div class="wrapper">
+</head>
+<body>
+  <div class="wrapper">
             <nav>
               <div class="logo">LOGO</div>
               <ul>
@@ -31,5 +35,41 @@
 <section class="content"><p><section class="sec1"></section>
 <section class="content"><p></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nulla non nibh ornare egestas. Fusce porta laoreet ligula in sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p></section>
            </div>
-   </body>
- </html>
+  
+    <div class="container">
+        <h1>&#x2728; Find a Recipe  &#x2728;</h1>
+        <div id="searchWrapper">
+            <input
+            type="text"
+            name="searchBar"
+            id="searchBar"
+            placeholder="search for a recipe"
+            />
+        </div>
+        <ul id="recipeList"></ul>
+    </div>
+  
+    <!-- bottom of page -->
+    <footer>
+        <div class="container" style=" margin-left: 5%; text-align: center; display: inline-block; height:fit-content; width: 40%; background-color: tan; border-radius: 100px; border: 2px solid; " >
+            <h1>Recipes</h1>
+            <div id= "recipes" >
+                
+        
+            </div>
+        </div>
+        <div class="container" style="text-align: center; display: inline-block; height:fit-content; width: 40%; background-color: tan; border-radius: 100px; border: 2px solid;">
+            <h1>Stores</h1>
+            <div id = "stores"  >
+
+            </div>
+       </div>
+    </footer>
+    <button id = "clear-button" style="margin-left: 43%; border-radius: 10px; background-color: teal; border: 2px solid;font-size: x-large;">clear</button>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+
