@@ -56,7 +56,7 @@ section.sec1{
     outline: none;
   }
   nav ul li a.active{
-    background: #E247;
+    background: ##E24433;
     color: #fff;
     border-radius: 6px;
   }
@@ -72,7 +72,7 @@ section.sec1{
     color: #fff;
   }
   nav ul li a.active{
-    background: #E247;
+    background: #E24433;
     color: #fff;
     border-radius: 6px;
   }
