@@ -22,7 +22,7 @@
 </head>
 
 <body style="background-color: gray;">
-  <div class="wrapper">
+  <div class="wrapper" >
 
             <nav>
             
@@ -34,42 +34,35 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
               <ul>
                 <li id="About"><a class="active" href="#">About</a></li>
               </ul>
-             </nav>
-             <section class="sec1"></section>
-<section class="content"><p><section class="sec1"></section>
-<section class="content"><p></p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nulla non nibh ornare egestas. Fusce porta laoreet ligula in sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p></section>
            </div>
-  
-    <div class="container" style="border-style: solid; margin-left: 9%; margin-right: 16%; margin-bottom: 2%; padding: 9%; background-color: darkgray; display: flex; align-content: center; justify-content: space-around; flex-direction: column; align-items: center;">
-        <h1> Find a Recipe </h1>
+           <!-- middle of page  -->
+    <div class="container" style=" margin-top: 3%; border-style: solid; margin-left: 9%; margin-right: 16%; margin-bottom: 2%; padding: 8%; background-color: darkgray; display: flex; align-content: center; justify-content: space-around; flex-direction: column; align-items: center;">
+        <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" > Find a Recipe </h1>
         <div id="searchWrapper">
-            <input
-            type="text"
-            name="searchBar"
-            id="searchBar"
-            placeholder="search for a recipe"
-            />
+            <input rows="1" cols="30" name="searchBar" id="searchBar" placeholder="Search for a Recipe" style="font-size: 30px; text-align: center;">
+
+            </input>
         </div>
         <ul id="recipeList"></ul>
     </div>
   
     <!-- bottom of page -->
     <footer>
-        <div class="container" style=" margin-left: 5%; margin-right: 1%; text-align: center; display: inline-block; height:fit-content; width: 40%; background-color: rgba(0,0,0,0.8); border-radius: 100px; border: 2px solid; " >
+        <div class="container" style="margin-top: 5%; margin-left: 5%; margin-right: 1%; text-align: center; display: inline-block; height:fit-content; width: 40%; background-color: rgba(0,0,0,0.8); border-radius: 100px; border: 2px solid; " >
             <h1 style="color: white;">Recipes</h1>
             <div id= "recipes" >
                 
         
             </div>
         </div>
-        <div class="container" style="text-align: center; display: inline-block; height:fit-content; width: 40%; background-color: rgba(0,0,0,0.8); border-radius: 100px; border: 2px solid;">
+        <div class="container" style="text-align: center; display: inline-block; height:fit-content; width: 40%; background-color: rgba(0,0,0,0.8); border-radius: 90px; border: 2px solid;">
             <h1 style="color:white">Stores</h1>
             <div id = "stores"  >
 
             </div>
        </div>
     </footer>
-    <button id = "clear-button" style="margin-left: 43%; border-radius: 10px; background-color:darkred ; padding:1%; font-size: x-large; border-style:none ; color: white;">clear</button>
+    <button id = "clear-button" style="margin-top: 5%; margin-left: 43%; border-radius: 10px; background-color:darkred ; padding:1%; font-size: x-large; border-style:none ; color: white;">Clear</button>
 
     <script src="script.js"></script>
 
