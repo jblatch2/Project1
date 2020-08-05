@@ -13,35 +13,6 @@ ajaxone();
 
 })
 
-//we need to make ajaxcalls to the API
-
-$( document ).ready(function() {
-    function ajaxone () {
-        var api_url = '' // need to get
-        var key = '' // need to get
-        $.ajax({
-            url: api_url + "?key=" + key + " &q=" + $( "#searchBar" ).val(),
-            contentType: "application/json",
-            dataType: 'json',
-            success: function(result){
-                console.log(result);
-            }
-        })
-    }
-
-    function ajaxtwo () {
-        var api_url = '' // need to get
-        var key = '' // need to get
-        $.ajax({
-            url: api_url + "?key=" + key + " &q=" + $( "#searchBar" ).val(),
-            contentType: "application/json",
-            dataType: 'json',
-            success: function(result){
-                console.log(result);
-            }
-        })
-    }
-  });
 
 //we need to append the desired results to the recipe and store
 //we need to animate the fridge
@@ -76,7 +47,9 @@ function ajaxone(){
     }
   }
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    var x = JSON.parse(response)
+    console.log(x.results[0])
+    // finds first recipe
   });
 
 
