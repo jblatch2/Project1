@@ -5,9 +5,10 @@
 //document.ready function here
 
 //we need an event listener for the input
-$("#submitBtn").on("click", function(){
+$("#submitBtn").on("click", function(event){
+event.preventDefault();
 fridge();
-
+ajaxone();
 
 
 })
@@ -30,5 +31,25 @@ function fridge(){
         easing: 'easeOutElastic(1, .8)',
         loop: false
       });
+}
+
+function ajaxone(){
+  var search = $("#searchBar").val()
+ console.log(search)
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://recipe-puppy.p.rapidapi.com/?p=1&i="+ search,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "recipe-puppy.p.rapidapi.com",
+      "x-rapidapi-key": "f8000cf55dmsh8316770dd76cb27p11a0e3jsn8995fc3fe564"
+    }
+  }
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+
+
 }
 //we need a function to clear old results
