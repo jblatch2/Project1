@@ -49,6 +49,7 @@ function ajaxone(){
   $.ajax(settings).done(function (response) {
     var x = JSON.parse(response)
     console.log(x.results[0])
+    console.log(x.results[0].title)
     // finds first recipe
   });
 
