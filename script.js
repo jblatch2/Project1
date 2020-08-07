@@ -49,19 +49,21 @@ function ajaxone(){
   $.ajax(settings).done(function (response) {
     var x = JSON.parse(response)
     console.log(x.results[0])
+    console.log(x.results[0].title)
     // finds first recipe
   });
 
 
 
   //about modal
-  $("#about").on("click", function(){
-    $("#mcard").attr("class", "is-active");
-    $("#mcard").css("z-index", "1");
-})
-$(".delete").on("click", function(){
-    $("#mcard").attr("class", "modal")
-})
+
 
 }
 //we need a function to clear old results
+$("#about").on("click", function(){
+  $("#mcard").attr("class", "is-active");
+  $("#mcard").css("z-index", "1");
+})
+$(".delete").on("click", function(){
+  $("#mcard").attr("class", "modal")
+})
