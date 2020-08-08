@@ -118,7 +118,12 @@ function ajaxtwo() {
     console.log(response.business_search_results[1].business.alias)
     console.log(response.business_search_results[2].business.address1)
     console.log(response.business_search_results[2].business.alias)
-   
+    $("#address1").text(response.business_search_results[0].business.address1)
+    $("#alias1").text(response.business_search_results[0].business.alias)
+    $("#address2").text(response.business_search_results[1].business.address1)
+    $("#alias2").text(response.business_search_results[1].business.alias)
+    $("#address3").text(response.business_search_results[2].business.address1)
+    $("#alias3").text(response.business_search_results[2].business.alias)
     
     
     // $("#").text()
