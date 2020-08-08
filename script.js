@@ -1,18 +1,21 @@
 // pseudocode the js for the app's minimum viable product
 
 //global variables here
-
-//document.ready function here
-
+var lat;
+var lon;
+// document.ready function here
+geolocate();
 //we need an event listener for the input
 $("#submitBtn").on("click", function(event){
+
 event.preventDefault();
+
 fridge();
+
 ajaxone();
 
 
 })
-
 
 //we need to append the desired results to the recipe and store
 //we need to animate the fridge
@@ -52,11 +55,7 @@ function ajaxone(){
     console.log(x.results[0].title)
     // finds first recipe
   });
-
-
-
-  //about modal
-
+// geolocate
 
 }
 //we need a function to clear old results
@@ -67,3 +66,28 @@ $("#about").on("click", function(){
 $(".delete").on("click", function(){
   $("#mcard").attr("class", "modal")
 })
+
+function geolocate(){
+
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
+  
+  function success(pos) {
+    var crd = pos.coords;
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    lat =`${crd.latitude}` 
+    lon =`${crd.longitude}`
+  
+  }
+  
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
+  
+  navigator.geolocation.getCurrentPosition(success, error, options);
+
+}
