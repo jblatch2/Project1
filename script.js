@@ -125,12 +125,24 @@ function ajaxtwo() {
     $("#address3").text(response.business_search_results[2].business.address1)
     $("#alias3").text(response.business_search_results[2].business.alias)
     
-    
-    // $("#").text()
-   
-  
-   
-    // finds the store
 
   });
+}
+
+$("#clear-button").on("click",function(){
+clear();
+})
+ 
+
+function clear(){
+  $("#address1").text("")
+  $("#alias1").text("")
+  $("#address2").text("")
+  $("#alias2").text("")
+  $("#address3").text("")
+  $("#alias3").text("")
+  $("#foodimage").attr("src","" )
+  $("#title").text("")
+  $("#link").text("")
+  $("#link").attr("href","")
 }
