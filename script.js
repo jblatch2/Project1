@@ -53,7 +53,7 @@ function ajaxone(){
     var x = JSON.parse(response)
     console.log(x.results[0])
     console.log(x.results[0].title)
-    // finds first recipe
+    ajaxtwo();
   });
 // geolocate
 
@@ -90,4 +90,25 @@ function geolocate(){
   
   navigator.geolocation.getCurrentPosition(success, error, options);
 
+}
+
+function ajaxtwo() {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://yelp-com.p.rapidapi.com/search/nearby/"+lat+"/"+lon+"?offset=5&radius=5&term=grocery",
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "yelp-com.p.rapidapi.com",
+      "x-rapidapi-key": "008509dc35mshc6146dbc6641739p1cd995jsncb83ec825d20"
+    }
+  }
+  $.ajax(settings).done(function (response) {
+   console.log (response)
+   
+  
+   
+    // finds the store
+
+  });
 }
