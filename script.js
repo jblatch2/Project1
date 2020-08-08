@@ -53,6 +53,12 @@ function ajaxone(){
     var x = JSON.parse(response)
     console.log(x.results[0])
     console.log(x.results[0].title)
+    $("#foodimage").attr("src",x.results[0].thumbnail )
+    $("#title").text(x.results[0].title)
+    $("#link").text(x.results[0].href)
+    $("#link").attr("href",x.results[0].href)
+
+    
     // finds first recipe
   });
 // geolocate
